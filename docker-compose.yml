@@ -6,10 +6,10 @@ services:
     environment:
       - MYSQL_ENV_MYSQL_USER=phpipam
       - MYSQL_ENV_MYSQL_PASSWORD_FILE=/run/secrets/phpipam_mysql_root_password
-      - MYSQL_ENV_MYSQL_HOST={DB_HOST}:{DB_PORT}
+      - MYSQL_ENV_MYSQL_HOST=${DB_HOST}:${DB_PORT}
       - MYSQL_ENV_MYSQL_DB=phpipam
-      - GMAPS_API_KEY={API_KEY}
-      - GMAPS_API_GEOCODE_KEY={API_KEY}
+      - GMAPS_API_KEY=${API_KEY}
+      - GMAPS_API_GEOCODE_KEY=${API_KEY}
     secrets:
       - phpipam_mysql_root_password
     ports:
